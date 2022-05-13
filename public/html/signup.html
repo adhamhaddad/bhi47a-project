@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="icon" href="../images/icon.webp">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/api/signup" method="POST" autocomplete="on">
+        <div>
+            <i class="fa-solid fa-user-circle"></i>
+            <input type="text" placeholder="Username" maxlength="255" name="username" required/>
+        </div>
+        <div>
+            <i class="fa-solid fa-envelope" id="phone"></i>
+            <input type="email" placeholder="Email Address or Phone Number" class="mail" name="email" required/>
+        </div>
+        <div class="password">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="New Password" minlength="8" maxlength="255" class='pass1' required/>
+            <i class="fa-solid fa-eye-slash" id="hidepass1"></i>
+        </div>
+        <div class="confirm">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="Confirm Password" minlength="8" maxlength="255" class="pass2" name="pass" required/>
+            <i class="fa-solid fa-eye-slash" id="hidepass2"></i>
+        </div>
+        <div>
+            <input type="checkbox" id="check" required>
+            <label for="check">i agree the conditions and terms</label>
+        </div>
+        <button type="submit" disabled="true">sign up</button>
+        </form>
+        <div class="signin">
+            <span>Have already an account?</span><a href="http://127.0.0.1:8000/api/signin">Sign in and shop!</a>
+        </div>
+    </div>
+
+    <script src="../../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="../js/signup.js"></script>
+</body>
+</html>

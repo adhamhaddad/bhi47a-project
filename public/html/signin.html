@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="icon" href="../images/icon.webp">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/api/signin" method="POST" autocomplete="on">
+            <div>
+                <i class="fa-solid fa-user-circle"></i>
+                <input type="text" placeholder="Username" maxlength="255" name="username" required/>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope" id="phone"></i>
+                <input type="email" placeholder="Email Address or Phone Number" class="mail" name="email" required/>
+            </div>
+            <div class="password">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Password" minlength="8" maxlength="255" class='pass1' required/>
+                <i class="fa-solid fa-eye-slash" id="hidepass1"></i>
+            </div>
+            <div id="checkbox">
+                <div>
+                    <input type="checkbox" id="check"><label for="check">remember me</label>
+                </div>
+                <div>
+                    <a href="#">Forgot your password?</a>
+                </div>
+            </div>
+            <button type="submit" class="active">sign in</button>
+        </form>
+        <div class="signup">
+            <span>Don't have an account?</span><a href="http://127.0.0.1:8000/api/signup">Sign up and shop!</a>
+        </div>
+    </div>
+    <script src="../../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="../js/signin.js"></script>
+</body>
+</html>
